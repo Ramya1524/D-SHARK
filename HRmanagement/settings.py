@@ -74,9 +74,13 @@ WSGI_APPLICATION = 'HRmanagement.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+     'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DSHARK',
+        'USER': 'D_SHARK',
+        'PASSWORD': 'D-SHARK1524',
+        'HOST': 'd-shark.chbdmzf0qqzm.ap-south-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
