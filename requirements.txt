@@ -1,11 +1,56 @@
-1.django-3.1.1
+1.//python3.6
+sudo apt-get install python3.6
 
+2.//VScode
+sudo snap install --classic code
 
-// By running makemigrations, you’re telling Django that you’ve made some changes to your models and that you’d like the changes to be stored as a migration
+3.//git install
+sudo apt-get install git
+
+4.//make a directory for project
+mkdir D-SHARk
+
+5.//Inside the D-SHARk directory, install python virtual enviro
+sudo apt-get install python3-venv
+
+6.//name the python virtual enviro
+python3 -m venv pyvenv
+
+7.//To activate the python virtual environment
+source pyvenv/bin/activate
+
+8.//Install pip package
+sudo apt install python3-pip
+
+9.//Install Django
+pip install django
+
+10.//Tocheck django version
+django-admin --version
+
+11.//To create a project in the D-SHARk directory
+django-admin startproject HRmanagement .
+
+12.//To run the project
+python manage.py runserver
+
+13.//To create a app in the D-SHARk directory
+python3 manage.py startapp HRMS
+
+14.//To install a mysql client lib before mysql
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+
+15.//Install mysql
+pip3 install mysqlclient
+
+16.//To install django rest Framework
+pip3 install djangorestframework
+
+17.// By running makemigrations, you’re telling Django that you’ve made some changes to your models and that you’d like the changes to be stored as a migration
 python manage.py makemigrations HRMS
 
-// The sqlmigrate command takes migration names and returns their SQL
+18.// The sqlmigrate command takes migration names and returns their SQL
 python manage.py sqlmigrate HRMS 0001
 
-// Run migrate again to create those model tables in database
+19.// Run migrate again to create those model tables in database
 python manage.py migrate
