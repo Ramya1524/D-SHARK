@@ -4,6 +4,7 @@ from datetime import datetime
 from HRMS import models
 from django.views.generic import CreateView
 from .models import Employee
+from .models import UserProfile
 from .forms import LoginForm
 
 # Create your views here.
@@ -26,18 +27,20 @@ def homePage1(reqest):
 
 def homePage(request):
     # if this is a POST request we need to process the form data
-    #if request.method == 'POST':
+    if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-    form = LoginForm()
+        form = LoginForm(request.POST)
         # check whether it's valid:
-       # if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-           # return HttpResponseRedirect('/thanks/')
+        if form.is_valid():
+            p = UserProfile(user_name=form.cleaned_data['username'],password=form.cleaned_data['password'])
+            p.save()
+                # process the data in form.cleaned_data as required
+                # ...
+                # redirect to a new URL:
+            # return HttpResponseRedirect('/thanks/')
 
     # if a GET (or any other method) we'll create a blank form
-    #else:
-        #form = LoginForm()
+    else:
+        form = LoginForm()
 
     return render(request, 'HRMS/login.html', {'form': form})
