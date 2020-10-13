@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap_ui',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 DJANGO_BOOTSTRAP_UI_THEME = 'bootswatch-slate'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

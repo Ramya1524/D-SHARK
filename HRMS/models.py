@@ -10,3 +10,7 @@ class Employee(models.Model):
 class Department(models.Model):
     department_id = models.IntegerField('unique id')
     name = models.CharField(max_length=50)
+
+class UserProfile(models.Model):
+    user_name = models.CharField(max_length=50)
+    password = models.CharField(max_length=10)

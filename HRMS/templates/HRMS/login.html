@@ -34,13 +34,15 @@
       <div class="col-lg-6">
 
         <div class="well well-lg">
-            <form class="form-horizontal">
+            <form action="" method="post">
+
+
                 <fieldset>
                     <legend>LOGIN</legend>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="text" class="form-control" id={{form.username}} placeholder="username">
                     </div>
                   </div>
                   <div class="form-group">
@@ -49,15 +51,19 @@
                       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                     </div>
                   </div>
-        
+
+                 
+
                   <div class="form-group">
                     <div class="col-lg-12">
                       <button type="reset" class="btn btn-default">Cancel</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
                   </fieldset>
+
             </form>
+
         </div>
 
       </div>
